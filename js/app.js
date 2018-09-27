@@ -19,7 +19,8 @@ function handleFileLoad(evt) {
 function handleComplete(evt) {
 	var queue = evt.target;
 	ss["gift_atlas_"] = queue.getResult("gift_atlas_");
-	exportRoot = new lib.gift();
+	exportRoot = new lib.BG_mc();
+	exportRoot.setTransform(264,226.1,1,1,0,0,0,-0.5,0);
 
 	stage = new createjs.Stage(canvas);
 	stage.addChild(exportRoot);
