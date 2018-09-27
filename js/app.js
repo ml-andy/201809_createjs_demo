@@ -1,4 +1,4 @@
-console.log('v.5');
+console.log('v.6');
 
 // createjs
 var canvas, stage, bgAni, giftAni;
@@ -50,7 +50,7 @@ $('.list_item').on('mousedown', function() {
 });
 $('.list_item').on('mouseup', function() {
 	$(this).removeClass('press');
-	giftAni.shouldStop = false;
+	giftAni.shouldStop = true;
 
   if ($(this).hasClass('on')) stopAni($(this));
   else startAni($(this));
