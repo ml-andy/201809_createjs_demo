@@ -1,7 +1,8 @@
-console.log('v.2');
+console.log('v.3');
 
 var canvas, stage, bgAni, giftAni;
 
+init();
 function init() {
 	canvas = document.getElementById("giftAni");
 	images = images||{};
@@ -24,29 +25,37 @@ function handleComplete(evt) {
 	stage = new createjs.Stage(canvas);
 
 	bgAni = new lib.BG_mc();
-	bgAni.setTransform(264,226.1,1,1,0,0,0,-0.5,0);
+	bgAni.setTransform(264,236.1,1,1,0,0,0,-0.5,0);
+	bgAni.alpha = 0;
 	stage.addChild(bgAni);
-
-	giftAni = new lib.GIFT_mc();
-	giftAni.setTransform(97.9,205,1,1,0,0,0,-156.1,0);
-	stage.addChild(giftAni);
 	
 	stage.update();
 	createjs.Ticker.setFPS(lib.properties.fps);
 	createjs.Ticker.addEventListener("tick", stage);
+	
+	openingAni();
 }
-
-init();
+function openingAni() {
+	createjs.Tween.get(bgAni)
+		.to({ alpha: 1, y: 226 }, 300)
+		.call(function() {
+			giftAni = new lib.GIFT_mc();
+			giftAni.setTransform(97.9,205,1,1,0,0,0,-156.1,0);
+			stage.addChild(giftAni);
+		});
+}
 
 
 $('.list_item').on('mousedown', function() {
 	$(this).addClass('press');
 });
-
 $('.list_item').on('mouseup', function() {
   $(this).removeClass('press');
   if ($(this).hasClass('on')) stopAni($(this));
   else startAni($(this));
+});
+$('.submit a').on('click', function() {
+	giftAni.gotoAndPlay(73);
 });
 
 function stopAni(target) {
