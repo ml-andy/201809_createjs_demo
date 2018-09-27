@@ -1,0 +1,22 @@
+@import "base.scss";
+@import "index.scss";
+$vpw: 1920;
+$vph: 990;
+
+body{
+  *{
+    image-rendering: -webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+  }
+}
+
+.wrapper{
+  @include r;
+}
+
+
+//mobile
+// $vpw: 980;
+// $vph: 1845;
+// @media screen and (max-width: 980px) {
+// }

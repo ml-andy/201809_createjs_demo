@@ -1,0 +1,15 @@
+@import "base.scss";
+$vpw: 1920;
+$vph: 990;
+section.index{
+  @include r;
+}
+
+//mobile
+$vpw: 980;
+$vph: 1845;
+@media screen and (max-width: 980px) {
+  section.index{
+    @include r;
+  }
+}
