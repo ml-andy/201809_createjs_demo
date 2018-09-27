@@ -50,7 +50,9 @@ $('.list_item').on('mousedown', function() {
 	$(this).addClass('press');
 });
 $('.list_item').on('mouseup', function() {
-  $(this).removeClass('press');
+	$(this).removeClass('press');
+	giftAni.shouldStop = false;
+
   if ($(this).hasClass('on')) stopAni($(this));
   else startAni($(this));
 });
