@@ -1,4 +1,4 @@
-console.log('v.1');
+console.log('v.2');
 
 var canvas, stage, bgAni, giftAni;
 
@@ -45,24 +45,45 @@ $('.list_item').on('mousedown', function() {
 
 $('.list_item').on('mouseup', function() {
   $(this).removeClass('press');
-  if ($(this).hasClass('on')) $(this).removeClass('on');
-  else {
-    $(this).addClass('on');
-    switch ($(this).index()) {
+  if ($(this).hasClass('on')) stopAni($(this));
+  else startAni($(this));
+});
+
+function stopAni(target) {
+	target.removeClass('on');
+		switch (target.index()) {
       case 0:
-        giftAni.gotoAndPlay(32);
+        giftAni.gotoAndStop(19);
         break;
       case 1:
-        giftAni.gotoAndPlay(43);
+        giftAni.gotoAndStop(32);
         break;
       case 2:
-        giftAni.gotoAndPlay(56);
+        giftAni.gotoAndStop(43);
         break;
       case 3:
-        giftAni.gotoAndPlay(72);
+        giftAni.gotoAndStop(56);
         break;
       default:
         break;
     }
-  }
-});
+}
+function startAni(target) {
+	target.addClass('on');
+	switch (target.index()) {
+		case 0:
+			giftAni.gotoAndPlay(20);
+			break;
+		case 1:
+			giftAni.gotoAndPlay(33);
+			break;
+		case 2:
+			giftAni.gotoAndPlay(44);
+			break;
+		case 3:
+			giftAni.gotoAndPlay(57);
+			break;
+		default:
+			break;
+	}
+}

@@ -30,7 +30,8 @@ html,body {
   color: black;
   margin-right: 1%;
   margin-bottom: 20px; 
-  background-color: rgba(255,255,200);
+  background-color: #108ee9;
+  color: #FFF;
   border-radius: 5px;
   box-shadow: 2px 2px 5px #666;
   cursor: pointer;
@@ -47,4 +48,24 @@ html,body {
 .list_item.on {
   opacity: 0.5;
   box-shadow: 0 0 0 #333;
+}
+.submit {
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.submit a {
+  display: inline-block;
+  vertical-align: top;
+  padding: 15px 80px;
+  border-radius: 5px;
+  background-color: #f57d23;
+  color: #FFF;
+  text-align: center;
+  text-decoration: none;
+}
+
+.submit a:hover {
+  opacity: 0.8;
 }
