@@ -1,4 +1,4 @@
-console.log('v.3');
+console.log('v.4');
 
 var canvas, stage, bgAni, giftAni;
 
@@ -54,9 +54,14 @@ $('.list_item').on('mouseup', function() {
   if ($(this).hasClass('on')) stopAni($(this));
   else startAni($(this));
 });
-$('.submit a').on('click', function() {
+$('.submitbtn').on('click', function() {
 	giftAni.gotoAndPlay(73);
+	$('.list_item').attr('class', 'list_item');
 });
+$('.playbtn').on('click', function() {
+	giftAni.shouldStop = false;
+	giftAni.gotoAndPlay(1);
+})
 
 function stopAni(target) {
 	target.removeClass('on');

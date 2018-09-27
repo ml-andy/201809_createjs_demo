@@ -266,22 +266,23 @@ p.nominalBounds = new cjs.Rectangle(-144,-150,291,272);
 
 (lib.GIFT_mc = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
+	this.shouldStop = true;
 
 	// timeline functions:
 	this.frame_19 = function() {
-		this.stop();
+		if (this.shouldStop) this.stop();
 	}
 	this.frame_32 = function() {
-		this.stop();
+		if (this.shouldStop) this.stop();
 	}
 	this.frame_43 = function() {
-		this.stop();
+		if (this.shouldStop) this.stop();
 	}
 	this.frame_56 = function() {
-		this.stop();
+		if (this.shouldStop) this.stop();
 	}
 	this.frame_72 = function() {
-		this.stop();
+		if (this.shouldStop) this.stop();
 	}
 
 	// actions tween:
