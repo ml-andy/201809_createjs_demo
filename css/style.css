@@ -1,0 +1,50 @@
+html,body {
+  background-color: rgba(240,240,240);
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.index {
+  width: 550px;
+  margin: 20px auto;
+  border-radius: 5px;
+  background-color: #fff;
+}
+#giftAni {
+  width: 100%;
+  height: auto;
+  margin-bottom: 25px;
+}
+.list {
+  width: 100%;
+  padding: 20px;
+  user-select: none;
+}
+.list_item {
+  width: 48%;
+  padding: 30px 0;
+  font-size: 18px;
+  text-align: center;
+  color: black;
+  margin-right: 1%;
+  margin-bottom: 20px; 
+  background-color: rgba(255,255,200);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #666;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+}
+.list_item:nth-child(2n) {
+  margin-right: 0;
+  margin-left: 1%;
+}
+.list_item.press {
+  box-shadow: 0 0 0 #333;
+}
+.list_item.on {
+  opacity: 0.5;
+  box-shadow: 0 0 0 #333;
+}
