@@ -1,5 +1,6 @@
-console.log('v.4');
+console.log('v.5');
 
+// createjs
 var canvas, stage, bgAni, giftAni;
 
 init();
@@ -14,11 +15,9 @@ function init() {
 	loader.loadFile({src:"images/gift_atlas_.json", type:"spritesheet", id:"gift_atlas_"}, true);
 	loader.loadManifest(lib.properties.manifest);
 }
-
 function handleFileLoad(evt) {
 	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
 }
-
 function handleComplete(evt) {
 	var queue = evt.target;
 	ss["gift_atlas_"] = queue.getResult("gift_atlas_");
@@ -45,7 +44,7 @@ function openingAni() {
 		});
 }
 
-
+// app 
 $('.list_item').on('mousedown', function() {
 	$(this).addClass('press');
 });
