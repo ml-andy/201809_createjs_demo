@@ -36,7 +36,7 @@ function handleComplete(evt) {
 }
 function openingAni() {
 	createjs.Tween.get(bgAni)
-		.to({ alpha: 1, y: 226 }, 300)
+		.to({ alpha: 1, y: 226 }, 1000)
 		.call(function() {
 			giftAni = new lib.GIFT_mc();
 			giftAni.setTransform(97.9,205,1,1,0,0,0,-156.1,0);
